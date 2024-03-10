@@ -1,7 +1,7 @@
 /* Calculator App Styles (CSS) */
 
 /* Css Variables */
-:root{
+:root {
   --mainWhite: #ffffff;
   --mainBlack: #111111de;
   --darkGray: #ffffff28;
@@ -13,11 +13,17 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 body {
   width: 100vw;
   height: 100vh;
+  background: -o-linear-gradient(top, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
+    -o-linear-gradient(top, rgba(0, 0, 0, 0.02) 50%, rgba(255, 255, 255, 0.02)
+          61%, rgba(0, 0, 0, 0.02) 73%),
+    -o-linear-gradient(57deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2)
+          100%);
   background: linear-gradient(to bottom, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
     linear-gradient(
       to bottom,
@@ -38,12 +44,20 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: var(--mainBlack);
   border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 10px var(--mainBlack);
   box-shadow: 2px 2px 10px var(--mainBlack);
   font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -51,11 +65,23 @@ body {
 #calculator #output {
   width: 100%;
   height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: end;
   padding: 10px 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 #calculator #output .input-data {
@@ -78,17 +104,22 @@ body {
 #calculator #inputs {
   width: 100%;
   height: 75%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
 }
 #calculator #inputs .row {
   height: 100%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 2em 1fr 2em 1fr 2em 1fr;
   grid-template-columns: repeat(4, 1fr);
   gap: 2em;
   padding: 1em;
 }
 #calculator #inputs .last-row {
+  -ms-grid-columns: 2.2fr 1fr 1fr;
   grid-template-columns: 2.2fr 1fr 1fr;
 }
 
@@ -105,6 +136,8 @@ body {
   color: var(--mainWhite);
   background: var(--darkGray);
   cursor: pointer;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 #calculator #inputs .row button:hover,
@@ -119,18 +152,18 @@ body {
 
 /*? Delete Buttton */
 #calculator #inputs .row #del {
-    font-size: 3em;
-    color: rgb(0, 0, 0);
-    background: #ff0000;
+  font-size: 3em;
+  color: rgb(0, 0, 0);
+  background: #ff0000;
 }
 #calculator #inputs .row #del:hover,
 #calculator #inputs .row #del:active {
-    background: #b60000;
+  background: #b60000;
 }
 
 /*? Top Row Buttons */
 #calculator #inputs .row button.act {
-    background: var(--lightGray);
+  background: var(--lightGray);
 }
 #calculator #inputs .row button.act:hover,
 #calculator #inputs .row button.act:active {
