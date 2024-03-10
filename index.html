@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <!-- Linking StyleSheet Here -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- DESC: This is a Responsive Calculator. I made it only for Practice... -->
+
+    <!-- Calculator App -->
+    <div id="calculator">
+      <div id="output">
+        <span class="input-data"></span>
+        <span class="final-result"></span>
+      </div>
+      <div id="inputs">
+        <!-- ! 1st Row of Calculator App Button -->
+        <div class="row">
+          <button type="button" class="btn act clear">C</button>
+          <button type="button" class="btn act del">DEL</button>
+          <button type="button" class="btn act perc">%</button>
+          <button type="button" class="btn ope">/</button>
+        </div>
+
+        <!-- ! 2nd Row of Calculator App Button -->
+        <div class="row">
+          <button type="button" class="btn">7</button>
+          <button type="button" class="btn">8</button>
+          <button type="button" class="btn">9</button>
+          <button type="button" class="btn ope">x</button>
+        </div>
+        
+        <!-- ! 3rd Row of Calculator App Button -->
+        <div class="row">
+          <button type="button" class="btn">4</button>
+          <button type="button" class="btn">5</button>
+          <button type="button" class="btn">6</button>
+          <button type="button" class="btn ope">-</button>
+        </div>
+
+        <!-- ! 4th Row of Calculator App Button -->
+        <div class="row">
+          <button type="button" class="btn">1</button>
+          <button type="button" class="btn">2</button>
+          <button type="button" class="btn">3</button>
+          <button type="button" class="btn ope">+</button>
+        </div>
+
+        <!-- ! Last Row of Calculator App Button -->
+        <div class="row">
+          <button type="button" class="btn">0</button>
+          <button type="button" class="btn">.</button>
+          <button type="button" class="btn ope">=</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Linking The JS Here -->
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
